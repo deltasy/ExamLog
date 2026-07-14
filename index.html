@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExamLog</title>
     <link rel="icon" href="/imagens/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+</style>
+
 <body>
-    Inicial
+    <header>
+        <nav id="navbar">
+            <img id="nav-logo" src="imagens/logo.png" alt="Logo do ExamLog">
+            <span class="logo-text">ExamLog</span>
+            <div class="menu-navegacao">
+                <a href="#materias">Matérias</a>
+                <a href="#">Assembleias</a>
+                <a href="#cobrancas">Cobranças</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-area">
+        <main>
+            <section id="hero-section">
+                <h1>Bem-vindo ao <span>ExamLog</span></h1>
+                <p>Organize suas anotações e informações de forma eficiente</p>
+                <button class="btn-principal">Nova Anotação</button>
+            </section>
+            <h1 class="turma">Turma- 2024.2</h1>
+        </main>
+
+
+        <section id="prazos">
+            <div>
+                <div class="flex margin-y">
+                    <div class="flex flex-column mright data-box">
+                        <div class="countdown">em 4 dias</div>
+                        <div class="data">QUA 23/07</div>
+                    </div>
+
+                    <div class="prova">
+                        <h2 class="nome-prova">OAC</h2>
+                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
+                            height="34" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 10 4 4 4-4" />
+                        </svg>
+                    </div>
+                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="flex margin-y">
+                    <div class="flex flex-column mright data-box">
+                        <div class="countdown">em 5 dias</div>
+                        <div class="data">QUI 24/07</div>
+                    </div>
+                    <div class="prova">
+                        <h2 class="nome-prova">Cálculo III</h2>
+                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
+                            height="34" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 10 4 4 4-4" />
+                        </svg>
+                    </div>
+                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="flex margin-y">
+                    <div class="flex flex-column mright data-box">
+                        <div class="countdown">em 6 dias</div>
+                        <div class="data">SEX 25/07</div>
+                    </div>
+                    <div class="prova">
+                        <h2 class="nome-prova">LEDA</h2>
+                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
+                            height="34" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 10 4 4 4-4" />
+                        </svg>
+                    </div>
+                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+
+                <div class="flex margin-y">
+                    <div class="flex flex-column mright data-box">
+                        <div class="countdown">em 7 dias</div>
+                        <div class="data">SÁB 26/07</div>
+                    </div>
+                    <div class="prova">
+                        <h2 class="nome-prova">Estatística</h2>
+                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
+                            height="34" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 10 4 4 4-4" />
+                        </svg>
+                    </div>
+                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="provas"></section>
+        <section id="estatisticas-turmas"></section>
+        <section id="pedagio-dados"></section>
+
+        <footer>>>>>>Algo vai ficar aqui<<<<<< </footer>
+    </div>
+
+
 </body>
+
 </html>
