@@ -8,6 +8,7 @@
     <link rel="icon" href="/imagens/logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/generic.css">
 </head>
 
 <style>
@@ -28,7 +29,7 @@
     </header>
 
     <div id="main-area">
-        <main>
+        <main style="display: none;">
             <section id="hero-section">
                 <h1>Bem-vindo ao <span>ExamLog</span></h1>
                 <p>Organize suas anotações e informações de forma eficiente</p>
@@ -39,78 +40,76 @@
 
 
         <section id="prazos">
-            <div>
-                <div class="flex margin-y">
-                    <div class="flex flex-column mright data-box">
-                        <div class="countdown">em 4 dias</div>
-                        <div class="data">QUA 23/07</div>
+            <div class="flex flex-column align-start">
+                <div class="full-width">
+                    <div class="box-materia full-width margin-y border-m">
+                        <div class="prova padding-y">
+                            <div class="flex flex-column align-start padding-r">
+                                <div class="flex" style="align-items: center;">
+                                    <h2 class="nome-prova text-large padding-r" style="margin: 0; line-height: 1;">OAC</h2>
+                                    <svg style="fill: rgb(27, 178, 211); width: 26px; height: 26px;" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96 48.01 48.01 0 0 1 0 96z"></path> </g></svg>
+                                </div>
+                                <span class="subtitulo">Prova</span>
+                            </div>
+                        </div>
+                        <div class="linha-vertical"></div>
+                        <div class="data-box flex padding-y border-m">
+                            <div>
+                                <div class="text-medium">Em 4 dias</div>
+                                <div class="data subtitulo">QUA 23/07</div>
+                            </div>
+                            <svg style="width: 35px; height: 35px" class="svg-image padding-l" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-document-rss" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> </defs> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(2.000000, 0.000000)" fill="#ffffff"> <path d="M5.958,0.042 L0.02,0.042 L0.02,15.953 L11.979,15.953 L11.979,4.042 L5.958,4.042 L5.958,0.042 L5.958,0.042 Z M1.979,13.062 L1.979,10.757 C3.253,10.757 4.285,11.789 4.285,13.062 L1.979,13.062 L1.979,13.062 Z M5.594,13.062 C5.594,10.992 4.024,9.403 1.98,9.403 L1.98,7.83 C4.698,7.83 7.157,10.31 7.157,13.062 L5.594,13.062 L5.594,13.062 Z M10.079,13.037 L8.517,13.037 C8.517,9.351 5.682,6.454 2.01,6.454 L2.01,4.893 C6.377,4.894 10.079,8.653 10.079,13.037 L10.079,13.037 Z" class="si-glyph-fill"> </path> <path d="M7.047,0.036 L7.047,2.989 L11.961,2.989 L7.047,0.036 Z" class="si-glyph-fill"> </path> </g> </g> </g></svg>
+                        </div>
                     </div>
-
-                    <div class="prova">
-                        <h2 class="nome-prova">OAC</h2>
-                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
-                            height="34" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m8 10 4 4 4-4" />
-                        </svg>
-                    </div>
-                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
-                    </svg>
+                    <svg class="padding-l" style="width: 35px; height:35px; fill: rgb(79, 76, 110);" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path> </g></svg>
                 </div>
 
-                <div class="flex margin-y">
-                    <div class="flex flex-column mright data-box">
-                        <div class="countdown">em 5 dias</div>
-                        <div class="data">QUI 24/07</div>
+                <div class="full-width">
+                    <div class="box-materia full-width border-m">
+                        <div class="prova padding-y">
+                            
+                            <div class="flex flex-column align-start padding-r">
+                                <div class="flex" style="align-items: center;">
+                                    <h2 class="nome-prova text-large padding-r" style="margin: 0; line-height: 1;">Cálculo 3</h2>
+                                    <svg style="fill: rgb(27, 178, 211); width: 26px; height: 26px;" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96 48.01 48.01 0 0 1 0 96z"></path> </g></svg>
+                                </div>
+                                <span class="subtitulo">Reposição</span>
+                            </div>
+                        </div>
+                        <div class="linha-vertical"></div>
+                        <div class="data-box flex padding-y border-m">
+                            <div>
+                                <div class="text-medium">Em 5 dias</div>
+                                <div class="data subtitulo">QUI 24/07</div>
+                            </div>
+                            <img class="padding-l" src="/imagens/svg/reposicao.png" alt="">
+                        </div>
                     </div>
-                    <div class="prova">
-                        <h2 class="nome-prova">Cálculo III</h2>
-                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
-                            height="34" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m8 10 4 4 4-4" />
-                        </svg>
-                    </div>
-                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
-                    </svg>
+                   <svg class="padding-l" style="width: 35px; height:35px; fill: rgb(79, 76, 110);" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path> </g></svg>
                 </div>
 
-                <div class="flex margin-y">
-                    <div class="flex flex-column mright data-box">
-                        <div class="countdown">em 6 dias</div>
-                        <div class="data">SEX 25/07</div>
+                <div class="full-width">
+                    <div class="box-materia full-width margin-y border-m">
+                        <div class="prova padding-y">
+                            
+                            <div class="flex flex-column align-start padding-r">
+                                <div class="flex" style="align-items: center;">
+                                    <h2 class="nome-prova text-large padding-r" style="margin: 0; line-height: 1;">Tecnologias</h2>
+                                    <svg style="fill: rgb(27, 178, 211); width: 26px; height: 26px;" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 0 1 0-96 48.01 48.01 0 0 1 0 96z"></path> </g></svg>
+                                </div>
+                                <span class="subtitulo">Projeto</span>
+                            </div>
+                        </div>
+                        <div class="linha-vertical"></div>
+                        <div class="data-box flex padding-y border-m">
+                            <div>
+                                <div class="text-medium">Em 6 dias</div>
+                                <div class="data subtitulo">SEX 25/07</div>
+                            </div>
+                            <img class="padding-l" src="/imagens/svg/presencial.png" alt="">
+                        </div>
                     </div>
-                    <div class="prova">
-                        <h2 class="nome-prova">LEDA</h2>
-                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
-                            height="34" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m8 10 4 4 4-4" />
-                        </svg>
-                    </div>
-                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-
-                <div class="flex margin-y">
-                    <div class="flex flex-column mright data-box">
-                        <div class="countdown">em 7 dias</div>
-                        <div class="data">SÁB 26/07</div>
-                    </div>
-                    <div class="prova">
-                        <h2 class="nome-prova">Estatística</h2>
-                        <svg class="chevron-dropdown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="34"
-                            height="34" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m8 10 4 4 4-4" />
-                        </svg>
-                    </div>
-                    <svg class="mleft-mini eye-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"/>
-                    </svg>
+                    <svg class="padding-l" style="width: 35px; height:35px; fill: rgb(79, 76, 110);" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path> </g></svg>
                 </div>
             </div>
         </section>
