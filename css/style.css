@@ -3,10 +3,12 @@
 :root {
     --color-primary: #FFFFFF;
     --color-gray-dark: #E0E0E0;
-    --color-gray-light: #BBBFBF;
-    --color-white: #878787;
+    --color-gray-light: #474141;
+    --color-white: #474141;
     --color-text-main: #FFFFFF;
     --color-bg-body: #05AD98;
+    --main-color-darker: #2e6962;
+    --main-color-superdark: #103f3a;
 }
 
 body {
@@ -137,7 +139,7 @@ body {
     transform: translateX(-50%) scaleX(0);
     width: 60%;
     height: 2.5px;
-    background: linear-gradient(90deg, #6C82FF, #00c3ff);
+    background: linear-gradient(#1fbdb0);
     border-radius: 99px;
     transition: transform 0.25s ease;
 }
@@ -145,7 +147,8 @@ body {
 .nav-link:hover,
 .nav-link.active {
     color: var(--color-primary);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(37, 230, 252, 0.126);
+    border-radius: 5px;
 }
 
 .nav-link:hover::after {
@@ -282,8 +285,8 @@ footer {
 
 .box-materia {
     background-color: var(--color-white);
-    border: 2px solid var(--color-gray-light);
-    border-radius: 14px;
+    border: 2px solid var(--main-color-darker);
+    border-radius: 8px !important;
     padding-right: 35px;
     padding-left: 35px;
     padding-top: 5px;
@@ -310,8 +313,8 @@ footer {
 
 .linha-vertical {
     height: 8vh;
-    width: 4px;
-    background-color: var(--color-gray-light);
+    width: 4px !important;
+    background-color: rgba(255, 255, 255, 0.171);
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 8px;
