@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamLog — Turmas</title>
+  <link rel="icon" href="../imagens/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/generic.css">
+  <link rel="stylesheet" href="../css/turma.css">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <!-- logo -->
+      <a href="../index.html" class="nav-brand">
+        <div class="nav-logo-box">
+          <img id="nav-logo" src="../imagens/logo.png" alt="Logo do ExamLog">
+        </div>
+        <span class="logo-text">ExamLog</span>
+      </a>
+
+      <!-- navegação navbar -->
+      <div class="menu-navegacao">
+        <a href="../index.html" class="nav-link">Inicio</a>
+        <a href="turma.html" class="nav-link active">Turma</a>
+        <a href="grade.html" class="nav-link">Grade Curricular</a>
+        <a href="central_duvidas.html" class="nav-link">Central de dúvidas</a>
+      </div>
+
+      <!-- perfil do usuário -->
+      <div class="nav-actions">
+        <button class="nav-perfil" aria-label="Perfil de usuario">
+          <span class="perfil-initials">EU</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div id="main-area">
+    <div class="turma-page">
+
+      <!-- barra de busca -->
+      <div class="search-section">
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <input class="search-input" type="text"
+            placeholder="Buscar turma por código ou nome..." id="search-turma">
+          <button class="search-clear" type="button">✕</button>
+        </div>
+
+        <!-- dropdown de resultados -->
+        <div class="search-dropdown">
+          <div class="search-item">
+            <div><div class="search-item-badge">CC2026.1</div></div>
+            <div>
+              <div class="search-item-text">Ciência da Computação — 2026.1</div>
+              <div class="search-item-sub">3 alunos • Prof. Heron Aragao</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- minhas turmas -->
+      <div class="section-header">
+        <h2 class="section-title">Minhas Turmas</h2>
+        <span class="section-count">1 turma encontrada</span>
+      </div>
+
+      <div class="turmas-grid">
+
+        <a href="#modal-turma1" class="turma-card">
+          <div class="turma-avatar">CC</div>
+          <div class="turma-info">
+            <div class="turma-codigo">CC2026.1</div>
+            <div class="turma-nome">Ciência da Computação — 2026.1</div>
+            <div class="turma-meta">
+              <span>👤 3 alunos</span>
+              <span>📚 8 disciplinas</span>
+              <span>🗓 2026.1</span>
+            </div>
+          </div>
+          <span class="turma-arrow">›</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-turma1" class="turma-modal-overlay">
+    <a href="#" class="modal-backdrop-link" aria-label="Fechar"></a>
+    <div class="turma-modal-panel">
+      <div class="modal-header">
+        <div>
+          <div class="modal-turma-badge">CC2026.1</div>
+          <h2 class="modal-turma-nome">Ciência da Computação</h2>
+          <div class="modal-turma-meta">Semestre 2026.1 • 3 alunos • Prof. Dr. Heron Aragao</div>
+        </div>
+        <a href="#" class="modal-close" aria-label="Fechar">✕</a>
+      </div>
+
+      <div class="modal-alunos-header">
+        <h3 class="modal-alunos-title">Estudantes matriculados</h3>
+        <span class="modal-alunos-count">3</span>
+      </div>
+
+      <div class="alunos-list">
+        <div class="aluno-item">
+          <div class="aluno-avatar">CR</div>
+          <div class="aluno-info">
+            <div class="aluno-nome">Cassiel Ribeiro</div>
+            <div class="aluno-matricula">20240001 • Ciência da Computação</div>
+          </div>
+          <span class="aluno-status ativo">Ativo</span>
+        </div>
+        <div class="aluno-item">
+          <div class="aluno-avatar verde">FL</div>
+          <div class="aluno-info">
+            <div class="aluno-nome">Filipe Lucas</div>
+            <div class="aluno-matricula">20240002 • Ciência da Computação</div>
+          </div>
+          <span class="aluno-status ativo">Ativo</span>
+        </div>
+        <div class="aluno-item">
+          <div class="aluno-avatar roxo">MM</div>
+          <div class="aluno-info">
+            <div class="aluno-nome">Matheus Mendes</div>
+            <div class="aluno-matricula">20240003 • Ciência da Computação</div>
+          </div>
+          <span class="aluno-status ativo">Ativo</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-pagina">
+    <div class="footer-conteudo">
+      <p class="footer-creditos">
+        &copy; 2026 Universidade Estadual da Paraíba.
+        <span>Desenvolvido pelos estudantes Cassiel Ribeiro, Filipe Lucas e Matheus Mendes.</span>
+      </p>
+      <p class="footer-links">
+        <a href="#privacidade" class="link-privacidade">Política de Privacidade</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

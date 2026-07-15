@@ -1,0 +1,428 @@
+.turma-page {
+  padding: 36px 32px 60px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.search-section {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: 14px;
+  padding: 0 18px;
+  gap: 12px;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.search-wrapper:focus-within {
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gray-dark);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  padding: 14px 0;
+}
+
+.search-input::placeholder {
+  color: var(--color-gray-dark);
+  font-style: normal;
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: var(--color-gray-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.15s;
+}
+
+.search-clear:hover {
+  color: var(--color-primary);
+}
+
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-primary);
+  border-top: none;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.search-wrapper:focus-within + .search-dropdown,
+.search-wrapper:focus-within ~ .search-dropdown {
+  display: block;
+}
+
+.search-dropdown:hover {
+  display: block;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-item-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.search-item-text {
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+}
+
+.search-item-sub {
+  font-size: 0.75rem;
+  color: var(--color-gray-dark);
+  margin-top: 1px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.section-count {
+  font-size: 0.78rem;
+  color: var(--color-gray-dark);
+}
+
+.turmas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.turma-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.turma-card:hover {
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.turma-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.turma-avatar.teal   { background: linear-gradient(135deg, #0d9e7e, #17c6a0); }
+.turma-avatar.purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+
+.turma-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.turma-codigo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.turma-nome {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 3px 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.turma-meta {
+  font-size: 0.78rem;
+  color: var(--color-gray-dark);
+  display: flex;
+  gap: 12px;
+}
+
+.turma-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.turma-arrow {
+  color: var(--color-gray-dark);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.turma-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.turma-modal-overlay:target {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-backdrop-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.turma-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 480px;
+  max-width: 95vw;
+  background: var(--color-bg-body);
+  border-left: 1.5px solid var(--color-gray-light);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid var(--color-gray-light);
+  gap: 12px;
+}
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-gray-light);
+  border-radius: 8px;
+  color: #333333;
+  font-size: 1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ff6b6b;
+}
+
+.modal-turma-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.modal-turma-nome {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin: 0 0 6px;
+}
+
+.modal-turma-meta {
+  font-size: 0.78rem;
+  color: var(--color-gray-dark);
+}
+
+.modal-alunos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px 12px;
+}
+
+.modal-alunos-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-gray-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0;
+}
+
+.modal-alunos-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 99px;
+}
+
+/* lista de alunos */
+.alunos-list {
+  padding: 0 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aluno-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  border-radius: 10px;
+}
+
+.aluno-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.aluno-avatar.verde   { background: linear-gradient(135deg, #0d9e7e, #17c6a0); }
+.aluno-avatar.roxo    { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+.aluno-avatar.rosa    { background: linear-gradient(135deg, #db2777, #f472b6); }
+.aluno-avatar.laranja { background: linear-gradient(135deg, #ea580c, #fb923c); }
+
+.aluno-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.aluno-nome {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aluno-matricula {
+  font-size: 0.72rem;
+  color: var(--color-gray-dark);
+  margin-top: 1px;
+}
+
+.aluno-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.aluno-status.ativo {
+  background: rgba(23, 198, 160, 0.15);
+  color: #17c6a0;
+}
