@@ -15,13 +15,17 @@
     .page-section {
       display: none;
     }
-    .page-section.active {
+
+    /* mostra a secao cujo id esta no hash da URL */
+    .page-section:target {
+      display: block;
+      animation: pageFadeIn 0.25s ease;
+    }
+
+    #main-area:not(:has(.page-section:target)) #inicio {
       display: block;
     }
 
-    .page-section.active {
-      animation: pageFadeIn 0.25s ease;
-    }
     @keyframes pageFadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -42,10 +46,10 @@
 
       <!-- navegação navbar -->
       <div class="menu-navegacao">
-        <a href="#inicio"          class="nav-link" data-page="inicio">Inicio</a>
-        <a href="#turma"           class="nav-link" data-page="turma">Turma</a>
-        <a href="#grade"           class="nav-link" data-page="grade">Grade Curricular</a>
-        <a href="#central-duvidas" class="nav-link" data-page="central-duvidas">Central de dúvidas</a>
+        <a href="#inicio"          class="nav-link">Inicio</a>
+        <a href="#turma"           class="nav-link">Turma</a>
+        <a href="#grade"           class="nav-link">Grade Curricular</a>
+        <a href="#central-duvidas" class="nav-link">Central de dúvidas</a>
       </div>
 
       <!-- perfil do usuario -->
@@ -60,7 +64,7 @@
   <div id="main-area">
 
     <!-- pagina: INICIO -->
-    <section id="page-inicio" class="page-section">
+    <section id="inicio" class="page-section">
       <main>
         <h1 class="turma">Turma - 2024.2</h1>
       </main>
@@ -255,7 +259,7 @@
     </section>
 
     <!-- pagina: TURMA -->
-    <section id="page-turma" class="page-section">
+    <section id="turma" class="page-section">
       <div class="turma-page">
 
         <!-- barra de busca -->
@@ -305,7 +309,7 @@
     </section>
 
     <!-- pagina: GRADE CURRICULAR -->
-    <section id="page-grade" class="page-section">
+    <section id="grade" class="page-section">
       <main>
         <div class="grade-container-total">
           <div class="grade-header">
@@ -348,7 +352,7 @@
     </section>
 
     <!-- pagina: CENTRAL DE DUVIDAS -->
-    <section id="page-central-duvidas" class="page-section">
+    <section id="central-duvidas" class="page-section">
       <main>
         <div class="tutorial-descricao-container">
           <div class="tutorial-header">
@@ -389,7 +393,7 @@
     </section>
 
     <!-- pagina: POLITICA DE PRIVACIDADE -->
-    <section id="page-politica" class="page-section">
+    <section id="politica" class="page-section">
       <main>
         <!-- AINDA VAZIO-->
       </main>
@@ -462,43 +466,7 @@
   <script src="js/recursos.js"></script>
   <script src="js/principal.js"></script>
 
-  <!-- roteador SPA -->
-  <script>
-    const PAGES = {
-      'inicio':           'page-inicio',
-      'turma':            'page-turma',
-      'grade':            'page-grade',
-      'central-duvidas':  'page-central-duvidas',
-      'politica':         'page-politica',
-    };
 
-    function navigateTo(hash) {
-      if (hash.startsWith('modal-')) return;
-
-      const pageId = PAGES[hash] || PAGES['inicio'];
-
-      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-
-      const target = document.getElementById(pageId);
-      if (target) target.classList.add('active');
-
-      document.querySelectorAll('.nav-link[data-page]').forEach(link => {
-        link.classList.toggle('active', link.dataset.page === hash);
-      });
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    window.addEventListener('load', () => {
-      const hash = location.hash.replace('#', '') || 'inicio';
-      navigateTo(hash);
-    });
-
-    window.addEventListener('hashchange', () => {
-      const hash = location.hash.replace('#', '') || 'inicio';
-      navigateTo(hash);
-    });
-  </script>
 
 </body>
 </html>
